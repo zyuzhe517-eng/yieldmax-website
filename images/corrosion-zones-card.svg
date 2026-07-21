@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img" aria-label="Australia corrosion zones — AS/NZS 4534:2006 — Where will your fence rust first?">
+  <title>Australia corrosion zones — AS/NZS 4534:2006</title>
+  <desc>YieldMax technical note card: pale green gradient background with three-bar logo watermark, six corrosion zone color stripe, and an AS/NZS 4534 badge.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8f5ee"/>
+      <stop offset="100%" stop-color="#95d5b2"/>
+    </linearGradient>
+    <pattern id="logoMark" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+      <g opacity="0.12">
+        <rect x="22" y="78" width="14" height="20" rx="2" fill="#3BBD7A"/>
+        <rect x="42" y="62" width="14" height="36" rx="2" fill="#2DA86A"/>
+        <polygon points="70,34 58,46 64,46 64,98 78,98 78,46 84,46" fill="#1A6B45"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="680" height="340" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="680" height="340" fill="url(#logoMark)"/>
+
+  <rect x="0" y="0"      width="32" height="56.67" fill="#2e7d32"/>
+  <rect x="0" y="56.67"  width="32" height="56.67" fill="#9ccc65"/>
+  <rect x="0" y="113.33" width="32" height="56.67" fill="#fdd835"/>
+  <rect x="0" y="170"    width="32" height="56.67" fill="#fb8c00"/>
+  <rect x="0" y="226.67" width="32" height="56.67" fill="#c62828"/>
+  <rect x="0" y="283.33" width="32" height="56.67" fill="#7e57c2"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="64" y="86" font-size="13" font-weight="700" fill="#1b4332" letter-spacing="3" opacity="0.75">YIELDMAX  ·  TECHNICAL NOTE  ·  AS/NZS 4534:2006</text>
+    <text x="64" y="160" font-size="36" font-weight="800" fill="#1b4332">Where will your fence</text>
+    <text x="64" y="202" font-size="36" font-weight="800" fill="#1b4332">rust first?</text>
+    <text x="64" y="248" font-size="19" font-weight="500" fill="#1b4332" opacity="0.85">Australia's six corrosion zones, decoded.</text>
+  </g>
+
+  <g transform="translate(580,260)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <circle cx="0" cy="0" r="50" fill="#ffffff" opacity="0.55"/>
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#1b4332" stroke-width="1.2" opacity="0.35"/>
+    <text x="0" y="-10" font-size="10" font-weight="700" fill="#1b4332" text-anchor="middle" letter-spacing="2">AS/NZS</text>
+    <text x="0" y="12" font-size="22" font-weight="800" fill="#1b4332" text-anchor="middle">4534</text>
+    <text x="0" y="28" font-size="9" font-weight="600" fill="#1b4332" text-anchor="middle" opacity="0.7">APPENDIX F</text>
+  </g>
+</svg>

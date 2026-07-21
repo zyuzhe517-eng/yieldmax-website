@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Australia Corrosion Zones — YieldMax Wire Coating Guide (AS/NZS 4534)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A clear visual guide to AS/NZS 4534:2006 corrosion categories across Australia, with coating recommendations for galvanised and zinc/aluminium fencing wire from YieldMax.">
+<style>
+  :root{
+    --deep:#1b4332;
+    --mid2:#2d6a4f;
+    --mid:#52b788;
+    --light:#95d5b2;
+    --pale:#caf0d2;
+    --cream:#fbf9f3;
+    --A:#2e7d32; --B:#9ccc65; --C:#fdd835; --D:#fb8c00; --E:#c62828; --F:#7e57c2;
+    --ink:#1f2933;
+    --muted:#52606d;
+    --line:#e1e8e4;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+
+  /* Pattern background */
+  .patbg{
+    background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 60%22><g opacity=%220.13%22 stroke=%22%231b4332%22 stroke-width=%221.4%22 fill=%22none%22 stroke-linejoin=%22round%22 stroke-linecap=%22round%22><polyline points=%220,52 12,40 20,46 30,30 40,38 52,18 62,34 72,28 82,40 94,24 106,36 120,30%22/><polyline points=%22-6,58 6,50 16,54 28,46 40,52 52,42 66,50 78,44 90,52 104,46 116,52 120,52%22/></g></svg>');
+    background-repeat:repeat;
+  }
+
+  /* TOPBAR */
+  .topbar{background:#fff;border-bottom:1px solid var(--line);padding:12px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .topbar .contact{font-size:12.5px;color:var(--muted)}
+  .topbar .contact a{color:var(--deep);text-decoration:none;border-bottom:1px dotted var(--mid)}
+  .back-link{font-size:13px;color:var(--mid2);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+  .back-link:hover{color:var(--deep)}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,var(--pale) 0%,#74c69d 100%);color:var(--deep);padding:44px 28px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;opacity:.22;pointer-events:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22><g opacity=%220.55%22><path d=%22M 32 86 L 42 70 L 50 76 L 58 58 L 66 68 L 78 44 L 88 86 Z%22 fill=%22%231b4332%22/></g></svg>');background-repeat:repeat;background-size:200px 200px}
+  .hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
+  .hero .eyebrow{letter-spacing:3px;font-size:11.5px;text-transform:uppercase;color:var(--deep);font-weight:700;opacity:.75}
+  .hero h1{margin:6px 0 8px;font-size:34px;line-height:1.18;color:var(--deep)}
+  .hero p{margin:0;max-width:780px;font-size:15px;color:var(--deep)}
+
+  /* MAIN */
+  main{max-width:1180px;margin:0 auto;padding:24px 20px 50px}
+  .grid{display:grid;gap:20px}
+  .grid.two{grid-template-columns:1.45fr 1fr}
+  @media(max-width:980px){.grid.two{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 1px 2px rgba(27,67,50,.04)}
+  .card h2{margin:0 0 10px;font-size:19px;color:var(--deep)}
+  .card h3{margin:14px 0 6px;font-size:14px;color:var(--mid2);text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+  .pill{display:inline-block;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600;color:#fff}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--pale);font-weight:700;color:var(--deep)}
+  .swatch{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;vertical-align:middle;border:1px solid rgba(0,0,0,.15)}
+
+  .footnote{font-size:12px;color:var(--muted);margin-top:8px}
+
+  .kpi{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:6px}
+  @media(max-width:780px){.kpi{grid-template-columns:repeat(3,1fr)}}
+  .kpi .box{padding:12px 8px;border-radius:10px;color:#fff;text-align:center;font-weight:700;font-size:13px;line-height:1.25}
+  .kpi small{display:block;font-weight:500;opacity:.95;font-size:11.5px;margin-top:3px}
+
+  svg.map{width:100%;height:auto;display:block;background:#eaf3ed;border-radius:10px}
+  .marker-label{font-size:9.5px;fill:var(--ink);pointer-events:none}
+
+  .factor{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+  .factor .ico{flex:0 0 30px;height:30px;border-radius:8px;background:var(--pale);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--deep)}
+  .factor .txt{font-size:13.5px;color:#243b53}
+
+  .twobyfour{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  @media(max-width:700px){.twobyfour{grid-template-columns:1fr}}
+
+  .arrowflow{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}
+  @media(max-width:780px){.arrowflow{grid-template-columns:repeat(2,1fr)}}
+  .arrowflow .step{padding:10px 8px;border-radius:8px;text-align:center;color:#fff;font-size:12px;font-weight:700;line-height:1.3}
+  .arrowflow .step small{display:block;font-weight:500;opacity:.95;font-size:10.5px;margin-top:3px}
+
+  /* RECOMMENDATION CARD */
+  .rec{background:linear-gradient(135deg,var(--deep) 0%,var(--mid2) 100%);color:#fff;border-radius:14px;padding:24px;margin-top:20px}
+  .rec h2{color:#fff;margin:0 0 6px;font-size:20px}
+  .rec p{margin:0 0 14px;font-size:14px;color:var(--pale)}
+  .rec table{font-size:13.5px}
+  .rec th{background:rgba(255,255,255,.10);color:#fff}
+  .rec td{border-bottom:1px solid rgba(255,255,255,.13);color:#eafaf1}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .cta a{display:inline-block;background:var(--mid);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:8px;font-size:14px}
+  .cta a.alt{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25)}
+
+  /* FOOTER */
+  footer{background:var(--deep);color:#cde3d6;padding:28px 28px;font-size:13px;margin-top:30px;position:relative;overflow:hidden}
+  footer::before{content:"";position:absolute;inset:0;opacity:.10;pointer-events:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22><g><path d=%22M 32 86 L 42 70 L 50 76 L 58 58 L 66 68 L 78 44 L 88 86 Z%22 fill=%22%23ffffff%22/></g></svg>');background-repeat:repeat;background-size:200px 200px}
+  footer .row{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;position:relative}
+  footer a{color:var(--light);text-decoration:none}
+  .small{font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div style="display:flex;align-items:center;gap:24px">
+    <a href="../news.html" class="back-link">← All News</a>
+    <a href="../index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 112" height="40" style="display:block">
+        <rect x="0"  y="72" width="26" height="36" rx="3" fill="#3BBD7A"/>
+        <rect x="34" y="44" width="26" height="64" rx="3" fill="#2DA86A"/>
+        <polygon points="81,0  58,26  68,26  68,108  94,108  94,26  104,26" fill="#1A6B45"/>
+        <text x="118" y="66" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="52" fill="#1A4D2E" letter-spacing="1">YIELD MAX</text>
+        <text x="120" y="108" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#3BBD7A" letter-spacing="3">STRONGER FENCES. BIGGER YIELDS.</text>
+      </svg>
+    </a>
+  </div>
+  <div class="contact">
+    <a href="https://www.yieldmaxfence.com/">www.yieldmaxfence.com</a> &nbsp;·&nbsp;
+    <a href="mailto:sales@yieldmaxfence.com">sales@yieldmaxfence.com</a> &nbsp;·&nbsp;
+    +86 150 3220 7479
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">YieldMax · Technical Note · AS/NZS 4534:2006</div>
+    <h1>Where will your fence rust first?<br>Australia's six corrosion zones, decoded.</h1>
+    <p>A one-page summary of <b>AS/NZS 4534:2006 — Appendix F</b>, the standard Australian engineers, farmers and importers use to choose the right zinc or zinc/aluminium-alloy coating for fencing wire. Use this map to spec the right product for your project — and contact YieldMax for matching coating mass options.</p>
+  </div>
+</section>
+
+<main>
+
+<!-- MAIN IDEA -->
+<section class="card">
+  <h2>The standard in one paragraph</h2>
+  <p>Australia's outdoor environment is divided into <b>six corrosivity categories (A–F)</b>, ranked by the <b>Corrosion Rate of Mild Steel (CRMS, µm/year)</b> measured from one year of exposed bare-steel coupons. The categories tell engineers and farmers how aggressive a site is, so they can choose the right zinc or zinc/aluminium-alloy coating thickness and predict service life. <b>Corrosivity falls off rapidly with distance inland from the sea</b>, so a single town can sit in 2–3 categories at once. Beyond macro-climate, microclimate factors (rain shielding, dew, fertilisers, galvanic contact, fires, soils, animal urine, etc.) can move a site into a worse category. <b>Zinc/5 % Al alloy coatings give 2–3× longer life</b> than plain zinc — biggest gain in harsh marine zones.</p>
+
+  <div class="kpi">
+    <div class="box" style="background:var(--A)">A · Very Low<small>&lt;1.3 µm/y · alpine</small></div>
+    <div class="box" style="background:var(--B);color:var(--deep)">B · Low<small>1.3–25 · arid / inland</small></div>
+    <div class="box" style="background:var(--C);color:var(--deep)">C · Medium<small>25–50 · coastal cities</small></div>
+    <div class="box" style="background:var(--D)">D · High<small>50–80 · sea-shore (calm)</small></div>
+    <div class="box" style="background:var(--E)">E · Very High<small>80–200 · surf / industrial</small></div>
+    <div class="box" style="background:var(--F)">F · Tropical<small>(≈B) + UV / mould</small></div>
+  </div>
+</section>
+
+<div class="grid two" style="margin-top:20px">
+
+  <!-- MAP -->
+  <section class="card">
+    <h2>Australia — measured corrosion sites (Table F2)</h2>
+    <div class="legend">
+      <span class="pill" style="background:var(--A)">A Very Low</span>
+      <span class="pill" style="background:var(--B);color:var(--deep)">B Low</span>
+      <span class="pill" style="background:var(--C);color:var(--deep)">C Medium</span>
+      <span class="pill" style="background:var(--D)">D High</span>
+      <span class="pill" style="background:var(--E)">E Very High</span>
+      <span class="pill" style="background:var(--F)">F Tropical</span>
+    </div>
+
+    <svg class="map" viewBox="0 0 900 720" xmlns="http://www.w3.org/2000/svg">
+      <defs><radialgradient id="seaglow" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#d6e9dc"></stop><stop offset="100%" stop-color="#eaf3ed"></stop></radialgradient></defs>
+      <rect x="0" y="0" width="900" height="720" fill="url(#seaglow)"></rect>
+      <path d="M 130,180 C 150,150 200,120 240,118 C 290,115 330,135 380,128 C 430,120 470,118 520,125 C 560,130 600,118 640,128 C 680,140 720,150 740,170 C 760,200 770,235 760,275 C 745,310 745,345 760,380 C 770,420 770,460 750,500 C 720,540 670,565 610,575 C 555,585 500,580 440,580 C 380,580 320,585 270,572 C 215,560 175,535 145,500 C 115,460 100,420 105,375 C 110,330 130,290 130,250 C 130,220 122,200 130,180 Z" fill="#fffbe6" stroke="#1b4332" stroke-width="2"></path>
+      <path d="M 600,640 C 620,620 660,625 670,650 C 678,675 660,695 630,695 C 605,695 588,675 600,640 Z" fill="#fffbe6" stroke="#1b4332" stroke-width="2"></path>
+      <g font-size="12" fill="#888" font-weight="600">
+        <text x="220" y="280">WA</text><text x="380" y="320">SA</text><text x="430" y="240">NT</text>
+        <text x="560" y="220">QLD</text><text x="600" y="380">NSW</text><text x="565" y="490">VIC</text><text x="630" y="670">TAS</text>
+      </g>
+      <text x="120" y="100" font-size="13" fill="#7a8aa0" font-style="italic">Indian Ocean</text>
+      <text x="700" y="450" font-size="13" fill="#7a8aa0" font-style="italic">Pacific Ocean</text>
+
+      <g><circle cx="654" cy="542" r="7" fill="var(--A)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="664" y="546">Mt Buller (1)</text></g>
+      <g>
+        <circle cx="494" cy="380" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="504" y="384">Coober Pedy (3)</text>
+        <circle cx="772" cy="444" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="725" y="438">Dubbo (4)</text>
+        <circle cx="838" cy="352" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="780" y="346">Toowoomba (9)</text>
+        <circle cx="630" cy="660" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="540" y="664">Hobart (11)</text>
+        <circle cx="552" cy="460" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="490" y="455">Whyalla (13)</text>
+        <circle cx="782" cy="506" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="720" y="512">Canberra (14)</text>
+        <circle cx="570" cy="498" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="495" y="504">Adelaide (15)</text>
+        <circle cx="702" cy="558" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="615" y="552">Melb-Clayton (18)</text>
+        <circle cx="118" cy="440" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="128" y="444">Perth-Bentley (19)</text>
+        <circle cx="862" cy="348" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="800" y="332">Brisbane (22)</text>
+        <circle cx="822" cy="476" r="6" fill="var(--B)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="800" y="466">Syd-Ryde (22)</text>
+      </g>
+      <g>
+        <circle cx="688" cy="562" r="7" fill="var(--C)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="618" y="572">Geelong (27)</text>
+        <circle cx="116" cy="444" r="7" fill="var(--C)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="42" y="430">Kwinana (29)</text>
+        <circle cx="824" cy="478" r="7" fill="var(--C)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="838" y="488">Sydney (32)</text>
+        <circle cx="836" cy="458" r="7" fill="var(--C)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="850" y="452">Newcastle (35)</text>
+        <circle cx="696" cy="558" r="7" fill="var(--C)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="708" y="582">Altona Bch (35)</text>
+        <circle cx="818" cy="490" r="7" fill="var(--C)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="830" y="500">Pt Kembla (45)</text>
+      </g>
+      <g>
+        <circle cx="560" cy="464" r="8" fill="var(--D)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="478" y="478">Port Pirie (74)</text>
+        <circle cx="702" cy="562" r="8" fill="var(--D)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="710" y="600">Seaford Bch (68)</text>
+      </g>
+      <g>
+        <circle cx="722" cy="154" r="9" fill="var(--E)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="732" y="158">Cowley Bch (142)</text>
+        <circle cx="836" cy="458" r="9" fill="var(--E)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="848" y="472">Newcastle Bch (194)</text>
+      </g>
+      <g>
+        <circle cx="736" cy="186" r="7" fill="var(--F)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="746" y="190">Townsville (15)</text>
+        <circle cx="718" cy="158" r="7" fill="var(--F)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="640" y="138">Tully (20)</text>
+        <circle cx="720" cy="150" r="7" fill="var(--F)" stroke="#fff" stroke-width="2"></circle><text class="marker-label" x="630" y="120">Innisfail (23)</text>
+      </g>
+      <line x1="60" y1="170" x2="780" y2="170" stroke="#7e57c2" stroke-dasharray="6 4" stroke-width="1.2"></line>
+      <text x="64" y="164" font-size="11" fill="#7e57c2" font-style="italic">Tropic of Capricorn (≈ Tropical zone above)</text>
+      <text x="700" y="510" font-size="11" fill="#c62828" font-weight="600">⚠ Coastal &lt;1 km strip = D / E</text>
+    </svg>
+    <p class="footnote">Numbers in brackets are CRMS in µm/year (one-year mild-steel corrosion). Sites overlap on the map where the standard records both city &amp; beach measurements.</p>
+  </section>
+
+  <!-- TABLE -->
+  <section class="card">
+    <h2>Category table (Table F1 + ISO 9223)</h2>
+    <table>
+      <thead><tr><th>Cat</th><th>CRMS</th><th>ISO</th><th>Outdoor</th></tr></thead>
+      <tbody>
+        <tr><td><span class="swatch" style="background:var(--A)"></span><b>A</b></td><td>&lt;1.3</td><td>C1</td><td>Alpine</td></tr>
+        <tr><td><span class="swatch" style="background:var(--B)"></span><b>B</b></td><td>1.3–25</td><td>C2</td><td>Arid / urban / rural</td></tr>
+        <tr><td><span class="swatch" style="background:var(--C)"></span><b>C</b></td><td>25–50</td><td>C3</td><td>Coastal</td></tr>
+        <tr><td><span class="swatch" style="background:var(--D)"></span><b>D</b></td><td>50–80</td><td>C4</td><td>Sea-shore (calm)</td></tr>
+        <tr><td><span class="swatch" style="background:var(--E)"></span><b>E</b></td><td>80–200</td><td>C5</td><td>Surf / off-shore / industrial</td></tr>
+        <tr><td><span class="swatch" style="background:var(--F)"></span><b>F</b></td><td>≈ B</td><td>—</td><td>Non-coastal tropics</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:18px">Corrosivity falls off with distance from the sea</h3>
+    <svg viewBox="0 0 420 220" width="100%" xmlns="http://www.w3.org/2000/svg" style="background:var(--cream);border-radius:8px">
+      <line x1="50" y1="20" x2="50" y2="180" stroke="#888"></line>
+      <line x1="50" y1="180" x2="400" y2="180" stroke="#888"></line>
+      <text x="50" y="14" font-size="10" fill="#52606d">CRMS (µm/y)</text>
+      <text x="320" y="200" font-size="10" fill="#52606d">Distance from coast (km) →</text>
+      <text x="20" y="32" font-size="9" fill="#52606d">200</text><text x="20" y="74" font-size="9" fill="#52606d">150</text><text x="20" y="116" font-size="9" fill="#52606d">100</text><text x="20" y="158" font-size="9" fill="#52606d">50</text><text x="30" y="184" font-size="9" fill="#52606d">0</text>
+      <g font-size="9" fill="#52606d"><text x="46" y="195">0</text><text x="115" y="195">1</text><text x="183" y="195">10</text><text x="252" y="195">30</text><text x="318" y="195">70</text><text x="378" y="195">100</text></g>
+      <rect x="50" y="20" width="350" height="14" fill="var(--E)" opacity=".25"></rect>
+      <rect x="50" y="120" width="350" height="38" fill="var(--C)" opacity=".25"></rect>
+      <rect x="50" y="158" width="350" height="22" fill="var(--B)" opacity=".25"></rect>
+      <path d="M 60,40 C 100,80 150,140 220,160 C 290,170 360,176 395,178" fill="none" stroke="var(--E)" stroke-width="2.5"></path>
+      <text x="60" y="55" font-size="10" fill="var(--E)" font-weight="700">Surf coast</text>
+      <path d="M 60,90 C 110,140 180,165 260,172 C 320,176 380,178 395,179" fill="none" stroke="var(--D)" stroke-width="2.5"></path>
+      <text x="100" y="115" font-size="10" fill="var(--D)" font-weight="700">Sheltered bay</text>
+      <path d="M 60,170 C 150,172 250,174 395,175" fill="none" stroke="var(--mid2)" stroke-width="2.5" stroke-dasharray="4 3"></path>
+      <text x="240" y="166" font-size="10" fill="var(--mid2)" font-weight="700">Arid / inland baseline</text>
+    </svg>
+    <p class="footnote">Schematic of Figure F1: corrosivity drops sharply within the first ~10 km from a surf coast.</p>
+  </section>
+</div>
+
+<!-- KEY CONCEPTS -->
+<section class="card" style="margin-top:20px">
+  <h2>Key concepts to remember</h2>
+
+  <h3>1. The corrosion driver chain</h3>
+  <div class="arrowflow">
+    <div class="step" style="background:var(--deep)">Time of wetness<small>RH &gt; 80 %, T &gt; 0 °C</small></div>
+    <div class="step" style="background:var(--mid2)">+ Airborne pollutants<small>Cl⁻ · SO₂ · H₂S</small></div>
+    <div class="step" style="background:#40916c">→ Attack on Zn carbonate barrier</div>
+    <div class="step" style="background:var(--mid)">→ Sacrificial Zn loss</div>
+    <div class="step" style="background:var(--E)">→ Steel rusts</div>
+  </div>
+
+  <h3>2. Microclimate factors that can bump a site to a worse category</h3>
+  <div class="twobyfour">
+    <div class="factor"><div class="ico">a</div><div class="txt"><b>Initial wet exposure</b> — early rain prevents protective carbonate film from forming.</div></div>
+    <div class="factor"><div class="ico">b</div><div class="txt"><b>Shielded from rain</b> — salt &amp; fertiliser stay deposited; life cut to ~60 % of rain-washed.</div></div>
+    <div class="factor"><div class="ico">c</div><div class="txt"><b>Prolonged dampness</b> — bottom fence wires, grass cover, timber posts, bore-water spray.</div></div>
+    <div class="factor"><div class="ico">d</div><div class="txt"><b>Galvanic contact</b> — Cu, bare steel, stainless or Al within ~1 mm accelerates Zn loss.</div></div>
+    <div class="factor"><div class="ico">e</div><div class="txt"><b>Soil burial</b> — alkaline clays (e.g. Birdsville) corrode even in Cat B.</div></div>
+    <div class="factor"><div class="ico">f</div><div class="txt"><b>Chemical contact</b> — CCA timber, lime, fertiliser, fungicide, damp concrete, cinders.</div></div>
+    <div class="factor"><div class="ico">g</div><div class="txt"><b>Barrier-film abrasion</b> — wind-blown sand, livestock rubbing, wire fretting.</div></div>
+    <div class="factor"><div class="ico">h</div><div class="txt"><b>Animal enclosures</b> — urine, organic vapours, high humidity.</div></div>
+    <div class="factor"><div class="ico">i</div><div class="txt"><b>Prevailing winds</b> — SO₂ from power stacks doubles corrosivity up to 80 km away.</div></div>
+    <div class="factor"><div class="ico">j</div><div class="txt"><b>Fire</b> — Zn melts at 420 °C; coating destroyed near 1000 °C; HT wire softens at 700 °C.</div></div>
+  </div>
+
+  <h3>3. Coating life rules of thumb</h3>
+  <ul style="margin:6px 0 0;padding-left:20px;font-size:13.5px;color:#243b53">
+    <li>Total Zn depletion ≈ <b>1.5×</b> the time to first steel rust (10 % surface).</li>
+    <li>Zn corrosion rate vs mild-steel rate: <b>1/50</b> (benign) up to <b>1/5</b> (marine).</li>
+    <li><b>Zn / 5 % Al alloy</b> coatings give <b>2–3×</b> the life of plain Zn for the same mass — biggest gain in Cat D / E.</li>
+    <li>In water: <b>soft fresh water (≈ 100 g/m²·mo)</b> is more corrosive than seawater; turbulent / splash zones are worst.</li>
+  </ul>
+</section>
+
+<!-- YIELDMAX RECOMMENDATION -->
+<section class="rec">
+  <h2>YieldMax coating recommendation by zone</h2>
+  <p>A practical starting-point spec sheet — confirm against your site's microclimate and the specifying engineer's requirements.</p>
+  <table>
+    <thead><tr><th>Zone</th><th>Where</th><th>Recommended YieldMax product</th><th>Typical coating mass</th></tr></thead>
+    <tbody>
+      <tr><td><b>A · B · F</b></td><td>Arid, inland, urban, non-coastal tropics</td><td>Class 3 heavily galvanised wire / fixed-knot field fence</td><td>≥ 240 g/m² Zn</td></tr>
+      <tr><td><b>C</b></td><td>Coastal cities &amp; bays</td><td>Class 4 galvanised or Zn/5 % Al alloy wire</td><td>≥ 300 g/m² Zn or ≥ 150 g/m² Zn-Al</td></tr>
+      <tr><td><b>D</b></td><td>Sea-shore, sheltered bays</td><td>Zn/5 % Al alloy ("ZnAl·5") fixed-knot or hinge-joint</td><td>≥ 215 g/m² Zn-Al</td></tr>
+      <tr><td><b>E</b></td><td>Surf coast, off-shore, heavy industry</td><td>Zn/5 % Al alloy + PVC sheath where exposed</td><td>≥ 230 g/m² Zn-Al + PVC</td></tr>
+    </tbody>
+  </table>
+  <div class="cta">
+    <a href="mailto:sales@yieldmaxfence.com?subject=Coating%20spec%20enquiry">Email us for a spec quote</a>
+    <a class="alt" href="https://www.yieldmaxfence.com/">Back to yieldmaxfence.com</a>
+  </div>
+</section>
+
+<p class="small" style="margin-top:18px">Source: AS/NZS 4534:2006 — Guidance on Corrosion Protection (Appendix F, informative). This summary is provided by YieldMax for planning purposes; the published standard remains the authoritative reference.</p>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="row">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 112" height="38" style="display:block;margin-bottom:8px">
+        <rect x="0"  y="72" width="26" height="36" rx="3" fill="#3BBD7A"/>
+        <rect x="34" y="44" width="26" height="64" rx="3" fill="#2DA86A"/>
+        <polygon points="81,0  58,26  68,26  68,108  94,108  94,26  104,26" fill="#5DD99A"/>
+        <text x="118" y="66" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="52" fill="white" letter-spacing="1">YIELD MAX</text>
+        <text x="120" y="108" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#3BBD7A" letter-spacing="3">STRONGER FENCES. BIGGER YIELDS.</text>
+      </svg>
+      Galvanised &amp; Zn/Al fencing wire · fixed-knot field fence · hinge-joint · barbed wire · star pickets.
+    </div>
+    <div style="text-align:right">
+      <a href="https://www.yieldmaxfence.com/">www.yieldmaxfence.com</a><br>
+      <a href="mailto:sales@yieldmaxfence.com">sales@yieldmaxfence.com</a><br>
+      +86 150 3220 7479
+    </div>
+  </div>
+</footer>
+
+</body></html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Technical Guides — YIELD MAX</title>
+  <meta name="description" content="Technical articles, product guides and industry news from YieldMax — fixed knot fencing for Australia and New Zealand.">
+  <style>
+    :root {
+      --green-dark: #1A4D2E;
+      --green-mid: #2d6e47;
+      --green-light: #3BBD7A;
+      --cream: #fbf9f3;
+      --line: #e1e8e4;
+      --ink: #1f2933;
+      --muted: #52606d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: var(--cream); color: var(--ink); }
+
+    /* NAV */
+    nav { background: #fff; border-bottom: 1px solid var(--line); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+    nav a.home { text-decoration: none; }
+    nav .nav-links { display: flex; gap: 28px; align-items: center; }
+    nav .nav-links a { text-decoration: none; color: var(--ink); font-size: 15px; }
+    nav .nav-links a:hover { color: var(--green-dark); }
+    nav .nav-cta { background: var(--green-dark); color: #fff !important; padding: 9px 20px; border-radius: 8px; font-weight: 700; font-size: 14px; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, var(--green-dark), var(--green-mid)); color: #fff; padding: 60px 40px; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; }
+    .hero h1 { font-size: 36px; font-weight: 900; margin-bottom: 12px; }
+    .hero p { font-size: 16px; opacity: 0.85; max-width: 600px; }
+
+    /* FILTER BAR */
+    .filter-bar { max-width: 1100px; margin: 32px auto 0; padding: 0 20px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .filter-bar span { font-size: 14px; color: var(--muted); margin-right: 4px; }
+    .tag-btn { border: 1px solid var(--line); background: #fff; color: var(--muted); padding: 6px 16px; border-radius: 999px; font-size: 13px; cursor: pointer; transition: all .15s; }
+    .tag-btn:hover, .tag-btn.active { background: var(--green-dark); color: #fff; border-color: var(--green-dark); }
+
+    /* ARTICLES GRID */
+    .articles { max-width: 1100px; margin: 24px auto 60px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+    .article-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s; text-decoration: none; color: inherit; }
+    .article-card:hover { box-shadow: 0 6px 24px rgba(26,77,46,.12); }
+    .card-emoji { background: linear-gradient(135deg, #e8f5ee, #caf0d2); font-size: 40px; padding: 28px; text-align: center; }
+    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .card-tag { display: inline-block; background: #e8f5ee; color: var(--green-dark); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; }
+    .card-title { font-size: 17px; font-weight: 800; color: var(--green-dark); line-height: 1.35; margin-bottom: 10px; }
+    .card-desc { font-size: 14px; color: var(--muted); line-height: 1.6; flex: 1; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .card-date { font-size: 12px; color: var(--muted); }
+    .card-read { font-size: 13px; font-weight: 700; color: var(--green-dark); }
+
+    /* FOOTER */
+    footer { background: var(--green-dark); color: #cde3d6; padding: 36px 40px; font-size: 13px; }
+    footer .row { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    footer a { color: #3BBD7A; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 112" height="36" style="display:block">
+      <rect x="0"  y="72" width="26" height="36" rx="3" fill="#3BBD7A"/>
+      <rect x="34" y="44" width="26" height="64" rx="3" fill="#2DA86A"/>
+      <polygon points="81,0  58,26  68,26  68,108  94,108  94,26  104,26" fill="#1A6B45"/>
+      <text x="118" y="66" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="52" fill="#1A4D2E" letter-spacing="1">YIELD MAX</text>
+      <text x="120" y="108" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#3BBD7A" letter-spacing="3">STRONGER FENCES. BIGGER YIELDS.</text>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#products">Products</a>
+    <a href="coatings.html">Coatings</a>
+    <a href="standards.html">Standards</a>
+    <a href="about.html">About</a>
+    <a href="index.html#contact" class="nav-cta">Request Sample</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>News & Technical Guides</h1>
+    <p>Product updates, compliance guides, and industry insights for the Australian and New Zealand fencing market.</p>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <span>Filter:</span>
+  <button class="tag-btn active" onclick="filterTag('all', this)">All</button>
+  <button class="tag-btn" onclick="filterTag('Technical', this)">Technical</button>
+  <button class="tag-btn" onclick="filterTag('Product', this)">Product</button>
+  <button class="tag-btn" onclick="filterTag('Market', this)">Market</button>
+  <button class="tag-btn" onclick="filterTag('Standards', this)">Standards</button>
+</div>
+
+<div class="articles" id="articles-grid">
+
+  <!-- Latest shipment -->
+  <a class="article-card" href="news/australia-7-90-30-fixed-knot-shipment.html" data-tag="Product">
+    <div class="card-emoji" style="background:url('news/australia-7-90-30-shipment.jpg') center 55%/cover no-repeat;padding:0;height:150px;font-size:0" aria-label="7/90/30 fixed knot fence loaded for Australia"></div>
+    <div class="card-body">
+      <span class="card-tag">Product</span>
+      <div class="card-title">7/90/30 High-Tensile Fixed Knot Fence Loaded for Australia</div>
+      <div class="card-desc">A new shipment of 7/90/30 fixed knot field fence, manufactured with high-tensile wire and an AS/NZS 4534 W10 zinc coating, is on its way to Australia.</div>
+      <div class="card-footer">
+        <span class="card-date">July 2026</span>
+        <span class="card-read">Read →</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Article 0 -->
+  <a class="article-card" href="news/ammonia-corrosion-guide.html" data-tag="Technical">
+    <div class="card-emoji" style="background:linear-gradient(135deg,#eef6f0,#caf0d2);position:relative;height:150px;padding:0;font-size:0" aria-label="Ammonia corrosion of galvanised wire">
+      <svg viewBox="0 0 200 150" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block">
+        <defs>
+          <radialGradient id="zn3" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#e8e8e8"/>
+            <stop offset="100%" stop-color="#9a9a9a"/>
+          </radialGradient>
+        </defs>
+        <circle cx="100" cy="75" r="50" fill="url(#zn3)" stroke="#666" stroke-width="1.5"/>
+        <g stroke="#8a8a8a" stroke-width="1" fill="none">
+          <circle cx="100" cy="75" r="40"/><circle cx="100" cy="75" r="30"/><circle cx="100" cy="75" r="20"/>
+        </g>
+        <g fill="#1b4332" font-family="Georgia,serif" font-size="15" font-weight="700">
+          <text x="36" y="40">NH₃</text><text x="150" y="44">NH₃</text>
+          <text x="40" y="120">NH₃</text><text x="150" y="118">NH₃</text>
+        </g>
+        <g stroke="#c62828" stroke-width="2" fill="none" stroke-linecap="round">
+          <path d="M64 52 L80 64"/><path d="M136 56 L122 66"/><path d="M70 104 L84 92"/><path d="M132 100 L118 90"/>
+        </g>
+        <text x="100" y="81" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c62828" font-weight="700">Zn²⁺</text>
+      </svg>
+    </div>
+    <div class="card-body">
+      <span class="card-tag">Technical</span>
+      <div class="card-title">Why Ammonia Destroys Galvanised Wire — and Zn-Al Survives</div>
+      <div class="card-desc">Dairy sheds and animal yards eat galvanised fencing alive, and adding more zinc doesn't help. The chemistry of ammonia attack, in plain English — and why a Zn-Al (Type ZA) coating is the right spec.</div>
+      <div class="card-footer">
+        <span class="card-date">June 2026</span>
+        <span class="card-read">Read →</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Article 1 -->
+  <a class="article-card" href="news/corrosion-zones-guide.html" data-tag="Technical">
+    <div class="card-emoji" style="background:url(images/corrosion-zones-card.svg) center/cover no-repeat;padding:0;height:150px;font-size:0" aria-label="Australia corrosion zones — AS/NZS 4534:2006"></div>
+    <div class="card-body">
+      <span class="card-tag">Technical</span>
+      <div class="card-title">Australia Corrosion Zones — Wire Coating Guide (AS/NZS 4534)</div>
+      <div class="card-desc">A clear visual guide to AS/NZS 4534:2006 corrosion categories across Australia, with coating recommendations for galvanised and zinc/aluminium fencing wire.</div>
+      <div class="card-footer">
+        <span class="card-date">May 2026</span>
+        <span class="card-read">Read →</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Article 2 -->
+  <a class="article-card" href="news/storage-white-rust-guide.html" data-tag="Technical">
+    <div class="card-emoji" style="background:linear-gradient(135deg,#fff5f5,#ffe1e1);position:relative;height:150px;padding:0;font-size:0" aria-label="White rust on galvanised wire">
+      <svg viewBox="0 0 200 150" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block">
+        <defs>
+          <radialGradient id="zn2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#e8e8e8"/>
+            <stop offset="100%" stop-color="#9a9a9a"/>
+          </radialGradient>
+        </defs>
+        <circle cx="100" cy="75" r="56" fill="url(#zn2)" stroke="#666" stroke-width="1.5"/>
+        <g stroke="#888" stroke-width="1" fill="none">
+          <circle cx="100" cy="75" r="46"/>
+          <circle cx="100" cy="75" r="36"/>
+          <circle cx="100" cy="75" r="26"/>
+          <circle cx="100" cy="75" r="16"/>
+        </g>
+        <g fill="#ffffff" stroke="#d4d4d4" stroke-width=".6">
+          <ellipse cx="82" cy="58" rx="7" ry="4"/>
+          <ellipse cx="120" cy="68" rx="5" ry="3"/>
+          <ellipse cx="95" cy="98" rx="8" ry="5"/>
+          <ellipse cx="125" cy="95" rx="6" ry="4"/>
+          <ellipse cx="75" cy="85" rx="4" ry="3"/>
+          <ellipse cx="108" cy="52" rx="4" ry="2.5"/>
+        </g>
+        <g>
+          <path d="M 160 22 Q 156 34 160 42 Q 164 34 160 22 Z" fill="#7eb8f0" opacity=".85"/>
+          <path d="M 156 38 L 130 58" stroke="#7eb8f0" stroke-width="1.4" stroke-dasharray="3,2" fill="none"/>
+        </g>
+      </svg>
+    </div>
+    <div class="card-body">
+      <span class="card-tag">Technical</span>
+      <div class="card-title">White Rust on Your New Fence? It Starts in the Shed — Storage Guide (AS/NZS 4534 App. D)</div>
+      <div class="card-desc">Why galvanised and Zn/Al wire goes chalky-white during storage, and the simple 4-step setup that stops it. Plain-English summary of the standard.</div>
+      <div class="card-footer">
+        <span class="card-date">May 2026</span>
+        <span class="card-read">Read →</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Article 3 -->
+  <a class="article-card" href="news/new-zealand-market.html" data-tag="Market">
+    <div class="card-emoji">🇳🇿</div>
+    <div class="card-body">
+      <span class="card-tag">Market</span>
+      <div class="card-title">YIELD MAX Expands into the New Zealand Rural Fencing Market</div>
+      <div class="card-desc">After 10+ years serving Australia, we are now actively partnering with New Zealand distributors and rural supply retailers — with fixed knot fence built for NZ's coastal, dairy and high-country conditions.</div>
+      <div class="card-footer">
+        <span class="card-date">June 2026</span>
+        <span class="card-read">Read →</span>
+      </div>
+    </div>
+  </a>
+
+
+</div>
+
+<footer>
+  <div class="row">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 112" height="34" style="display:block;margin-bottom:8px">
+        <rect x="0"  y="72" width="26" height="36" rx="3" fill="#3BBD7A"/>
+        <rect x="34" y="44" width="26" height="64" rx="3" fill="#2DA86A"/>
+        <polygon points="81,0  58,26  68,26  68,108  94,108  94,26  104,26" fill="#5DD99A"/>
+        <text x="118" y="66" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="52" fill="white" letter-spacing="1">YIELD MAX</text>
+        <text x="120" y="108" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#3BBD7A" letter-spacing="3">STRONGER FENCES. BIGGER YIELDS.</text>
+      </svg>
+      Serving Australia & New Zealand
+    </div>
+    <div style="text-align:right">
+      <a href="mailto:sales@yieldmaxfence.com">sales@yieldmaxfence.com</a><br>
+      +86 150 3220 7479
+    </div>
+  </div>
+</footer>
+
+<script>
+  function filterTag(tag, btn) {
+    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.article-card, [data-tag]').forEach(card => {
+      if (tag === 'all' || card.dataset.tag === tag) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

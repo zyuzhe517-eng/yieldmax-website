@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Specifications — Fixed Knot Fence | YIELD MAX</title>
+  <meta name="description" content="Custom height, wire gauge, stay spacing, coating and roll length for YIELD MAX fixed knot fence. AS 4534 & AS 2423 compliant. Built to your application — sheep, cattle, deer, exclusion fencing and more.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --green-dark: #1A4D2E; --green-mid: #2DA86A;
+      --green-light: #3BBD7A; --green-pale: #EDF7F2;
+      --text-dark: #1a2e1a; --text-grey: #555;
+    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text-dark); line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100; background: white;
+      border-bottom: 1px solid #e0ede6;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 60px; height: 72px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 15px; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-light); }
+    .nav-cta { background: var(--green-dark); color: white; padding: 10px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: background .2s; }
+    .nav-cta:hover { background: var(--green-mid); }
+
+    /* Page hero */
+    .page-hero {
+      background: linear-gradient(135deg, #1A4D2E 0%, #2d6e47 60%, #3BBD7A 100%);
+      color: white; padding: 80px 60px; text-align: center;
+    }
+    .page-hero .eyebrow { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+    .page-hero h1 { font-size: 46px; font-weight: 900; margin-bottom: 16px; line-height: 1.15; }
+    .page-hero h1 span { color: #7EEAB0; }
+    .page-hero p { font-size: 18px; opacity: .9; max-width: 780px; margin: 0 auto 28px; line-height: 1.7; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .hero-btns a { padding: 13px 28px; border-radius: 7px; font-weight: 800; font-size: 14px; text-decoration: none; display: inline-block; transition: transform .15s; }
+    .hero-btns a:hover { transform: translateY(-2px); }
+    .hero-btns .btn-w { background: white; color: var(--green-dark); }
+    .hero-btns .btn-o { border: 2px solid rgba(255,255,255,0.7); color: white; }
+
+    /* Breadcrumb */
+    .breadcrumb { background: var(--green-pale); padding: 14px 60px; font-size: 13px; color: var(--text-grey); border-bottom: 1px solid #cdeadb; }
+    .breadcrumb a { color: var(--green-dark); text-decoration: none; font-weight: 600; }
+    .breadcrumb a:hover { color: var(--green-light); }
+    .breadcrumb span { color: #aaa; margin: 0 8px; }
+
+    /* Article container */
+    .article { max-width: 980px; margin: 0 auto; padding: 56px 32px 64px; }
+    .lede {
+      background: var(--green-pale); border-left: 5px solid var(--green-dark);
+      padding: 26px 30px; border-radius: 8px; margin-bottom: 44px;
+      font-size: 17px; color: var(--green-dark); line-height: 1.75;
+    }
+    .lede strong { color: var(--green-dark); }
+
+    .section { margin-bottom: 56px; }
+    .section .num {
+      display: inline-block; background: var(--green-dark); color: white;
+      width: 36px; height: 36px; border-radius: 50%;
+      text-align: center; line-height: 36px; font-weight: 800; font-size: 15px;
+      margin-right: 12px; vertical-align: middle; flex-shrink: 0;
+    }
+    .section h2 {
+      font-size: 26px; color: var(--green-dark); font-weight: 900;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 12px;
+    }
+    .section h2 .num { margin-right: 0; }
+    .section p { font-size: 15.5px; color: var(--text-dark); margin-bottom: 14px; line-height: 1.75; }
+    .section p.intro { font-size: 16px; color: var(--text-grey); }
+
+    /* Callout */
+    .callout {
+      background: #f7fbf8; border: 1.5px solid #d0e8da;
+      border-radius: 10px; padding: 22px 26px; margin: 18px 0;
+    }
+    .callout h4 { font-size: 14px; font-weight: 800; color: var(--green-dark); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .callout p { font-size: 14.5px; color: var(--text-grey); margin-bottom: 0; line-height: 1.7; }
+    .callout a { color: var(--green-dark); font-weight: 700; }
+
+    /* Parameter grid */
+    .param-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+    .param-card {
+      background: white; border: 1.5px solid #d0e8da; border-radius: 12px;
+      padding: 22px 20px; border-top: 4px solid var(--green-dark);
+      transition: box-shadow .2s;
+    }
+    .param-card:hover { box-shadow: 0 4px 18px rgba(26,77,46,0.1); }
+    .param-card .p-icon { font-size: 26px; margin-bottom: 10px; }
+    .param-card h3 { font-size: 15px; font-weight: 800; color: var(--green-dark); margin-bottom: 4px; }
+    .param-card .p-range { font-size: 13px; font-weight: 700; color: var(--green-mid); margin-bottom: 8px; background: var(--green-pale); display: inline-block; padding: 2px 10px; border-radius: 20px; }
+    .param-card p { font-size: 13.5px; color: var(--text-grey); margin: 0; line-height: 1.6; }
+    @media (max-width: 760px) { .param-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .param-grid { grid-template-columns: 1fr; } }
+
+    /* Designation explainer */
+    .desig-box {
+      background: var(--green-dark); color: white;
+      border-radius: 12px; padding: 28px 30px; margin-top: 20px;
+      display: flex; align-items: center; gap: 32px; flex-wrap: wrap;
+    }
+    .desig-formula { font-size: 42px; font-weight: 900; letter-spacing: 2px; font-family: monospace; color: #7EEAB0; flex-shrink: 0; }
+    .desig-parts { display: flex; gap: 24px; flex-wrap: wrap; }
+    .desig-part { text-align: center; }
+    .desig-part .dp-val { font-size: 28px; font-weight: 900; color: #7EEAB0; display: block; }
+    .desig-part .dp-label { font-size: 12px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; }
+    .desig-sep { font-size: 32px; color: rgba(255,255,255,0.3); align-self: center; }
+    .desig-example { font-size: 13px; color: rgba(255,255,255,0.65); margin-top: 10px; line-height: 1.6; }
+
+    /* Spec table */
+    .spec-table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 14px; }
+    .spec-table th { background: var(--green-dark); color: white; padding: 12px 16px; text-align: left; font-weight: 700; }
+    .spec-table td { padding: 11px 16px; border-bottom: 1px solid #e0ede6; color: var(--text-dark); vertical-align: middle; }
+    .spec-table tr:nth-child(even) td { background: #f7fbf8; }
+    .spec-table tr:hover td { background: #e8f5ef; }
+    .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+    .tag-green { background: var(--green-pale); color: var(--green-dark); }
+    .tag-blue  { background: #e3f2fd; color: #0d47a1; }
+    .tag-amber { background: #fff8e1; color: #e65100; }
+
+    /* Coating comparison */
+    .coating-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 22px; }
+    .coating-card { border: 1.5px solid #d0e8da; border-radius: 12px; overflow: hidden; }
+    .coating-card .c-header { padding: 16px 22px; font-weight: 800; font-size: 14px; color: white; letter-spacing: .3px; }
+    .coating-card.hdg .c-header { background: #2d4a35; }
+    .coating-card.znal .c-header { background: #1a3a5c; }
+    .coating-card .c-body { padding: 20px 22px; }
+    .coating-card .c-body ul { padding-left: 18px; margin: 0; }
+    .coating-card .c-body li { font-size: 14px; color: var(--text-grey); margin-bottom: 7px; line-height: 1.55; }
+    .coating-card .c-best { margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--green-dark); background: var(--green-pale); padding: 8px 14px; border-radius: 6px; }
+    @media (max-width: 640px) { .coating-grid { grid-template-columns: 1fr; } }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; counter-reset: step; }
+    .step-card { background: white; border: 1.5px solid #d0e8da; border-radius: 10px; padding: 20px 16px; position: relative; counter-increment: step; }
+    .step-card::before {
+      content: counter(step); position: absolute; top: -14px; left: 18px;
+      background: var(--green-dark); color: white; width: 28px; height: 28px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800;
+    }
+    .step-card h4 { font-size: 14px; font-weight: 800; color: var(--green-dark); margin-bottom: 8px; margin-top: 4px; }
+    .step-card p { font-size: 13px; color: var(--text-grey); margin: 0; line-height: 1.6; }
+    @media (max-width: 720px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 420px)  { .steps { grid-template-columns: 1fr; } }
+
+    /* Info stats */
+    .info-strip { display: flex; gap: 0; margin-top: 28px; border: 1.5px solid #d0e8da; border-radius: 12px; overflow: hidden; flex-wrap: wrap; }
+    .info-item { flex: 1; min-width: 140px; text-align: center; padding: 20px 14px; border-right: 1px solid #d0e8da; }
+    .info-item:last-child { border-right: none; }
+    .info-item .i-icon { font-size: 22px; margin-bottom: 4px; }
+    .info-item .i-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: var(--text-grey); margin-bottom: 2px; }
+    .info-item .i-val { font-size: 15px; font-weight: 800; color: var(--green-dark); }
+
+    /* Form */
+    .form-wrap {
+      background: #f7fbf8; border: 1.5px solid #d0e8da;
+      border-radius: 14px; padding: 36px 36px 32px;
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+    .form-group { display: flex; flex-direction: column; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 12px; font-weight: 800; color: var(--green-dark); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .form-group label .req { color: #c62828; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      border: 1.5px solid #c8e0d0; border-radius: 6px;
+      padding: 11px 14px; font-size: 14px; font-family: inherit;
+      color: var(--text-dark); background: white; transition: border-color .2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { outline: none; border-color: var(--green-mid); box-shadow: 0 0 0 3px rgba(45,168,106,0.12); }
+    .form-group textarea { min-height: 110px; resize: vertical; }
+    .form-submit { grid-column: 1 / -1; text-align: center; margin-top: 6px; }
+    .form-submit button {
+      background: var(--green-dark); color: white; border: none;
+      padding: 14px 0; border-radius: 8px; font-size: 15px; font-weight: 800;
+      cursor: pointer; width: 100%; transition: background .2s, transform .15s;
+      letter-spacing: .3px;
+    }
+    .form-submit button:hover { background: var(--green-mid); transform: translateY(-1px); }
+    .form-note { font-size: 12.5px; color: var(--text-grey); text-align: center; margin-top: 10px; }
+    @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } .form-wrap { padding: 24px 20px; } }
+
+    /* Spec list */
+    .spec-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 24px; }
+    .spec-list li { font-size: 14.5px; color: var(--text-dark); padding-left: 22px; position: relative; line-height: 1.6; }
+    .spec-list li::before { content: "✓"; color: var(--green-mid); font-weight: 800; position: absolute; left: 0; }
+    @media (max-width: 700px) { .spec-list { grid-template-columns: 1fr; } }
+
+    /* Inline link card */
+    .link-card {
+      display: flex; gap: 18px; align-items: center;
+      background: linear-gradient(135deg, var(--green-mid) 0%, var(--green-light) 100%);
+      color: #ffffff; padding: 22px 26px; border-radius: 10px; text-decoration: none;
+      transition: filter .2s; margin-top: 20px;
+      box-shadow: 0 4px 14px rgba(45,168,106,0.18);
+    }
+    .link-card:hover { filter: brightness(1.05); }
+    .link-card .lc-icon { font-size: 28px; flex-shrink: 0; }
+    .link-card .lc-body h4 { font-size: 15px; font-weight: 800; margin-bottom: 4px; color: white; }
+    .link-card .lc-body p { font-size: 13.5px; margin: 0; line-height: 1.5; color: white !important; opacity: .92; }
+    .link-card .lc-arrow { margin-left: auto; font-size: 22px; flex-shrink: 0; }
+
+    /* CTA block */
+    .cta-block {
+      background: linear-gradient(135deg, #1A4D2E, #2d6e47);
+      color: white; padding: 48px 40px; border-radius: 14px;
+      text-align: center; margin-top: 56px;
+    }
+    .cta-block h3 { font-size: 26px; font-weight: 900; margin-bottom: 12px; }
+    .cta-block p { font-size: 16px; opacity: .88; margin-bottom: 24px; }
+    .cta-block .btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-block a { padding: 14px 28px; border-radius: 7px; font-weight: 800; font-size: 14px; text-decoration: none; display: inline-block; transition: transform .15s; }
+    .cta-block a:hover { transform: translateY(-2px); }
+    .cta-block .btn-w { background: white; color: var(--green-dark); }
+    .cta-block .btn-o { border: 2px solid white; color: white; }
+
+    /* Footer */
+    footer {
+      background: #0f1f14; color: #aaa;
+      padding: 48px 60px 28px;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+    }
+    footer h4 { color: white; font-size: 14px; font-weight: 700; margin-bottom: 14px; }
+    footer p, footer a { font-size: 13px; line-height: 1.8; color: #999; text-decoration: none; display: block; }
+    footer a:hover { color: var(--green-light); }
+    .footer-bottom { background: #0f1f14; color: #555; text-align: center; padding: 16px 60px; font-size: 12px; border-top: 1px solid #1e3824; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .page-hero { padding: 60px 24px; }
+      .page-hero h1 { font-size: 32px; }
+      .breadcrumb { padding: 12px 24px; }
+      .article { padding: 40px 20px; }
+      .section h2 { font-size: 22px; }
+      footer { grid-template-columns: 1fr; padding: 40px 24px 20px; }
+      .desig-box { gap: 20px; }
+      .desig-formula { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="../index.html">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 72" width="240" height="50">
+      <rect x="0"  y="46" width="17" height="24" rx="2" fill="#3BBD7A"/>
+      <rect x="21" y="28" width="17" height="42" rx="2" fill="#2DA86A"/>
+      <polygon points="51,0  37,17  44,17  44,70  61,70  61,17  68,17" fill="#1A6B45"/>
+      <text x="80" y="46" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="34" fill="#1A4D2E" letter-spacing="1">YIELD MAX</text>
+      <text x="82" y="62" font-family="Arial,sans-serif" font-weight="700" font-size="9" fill="#3BBD7A" letter-spacing="2">STRONGER FENCES. BIGGER YIELDS.</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#products" class="active">Products</a></li>
+    <li><a href="../coatings.html">Coatings</a></li>
+    <li><a href="../standards.html">Standards</a></li>
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="../index.html#markets">Markets</a></li>
+    <li><a href="../news.html">News</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <a href="#quote" class="nav-cta">Get a Custom Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="eyebrow">Custom Specifications · AS 4534 &amp; AS 2423</div>
+  <h1>Your Fence,<br><span>Your Specifications</span></h1>
+  <p>Not every paddock fits a catalogue item. We work directly with you to specify height, wire gauge, stay spacing, coating and roll length — every option remains fully AS 4534 and AS 2423 compliant.</p>
+  <div class="hero-btns">
+    <a href="#quote" class="btn-w">Request a Custom Quote →</a>
+    <a href="fixed-knot-fence.html" class="btn-o">View Standard Sizes</a>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span>›</span>
+  <a href="../index.html#products">Products</a><span>›</span>
+  Custom Specifications
+</div>
+
+<!-- ARTICLE -->
+<article class="article">
+
+  <!-- LEDE -->
+  <div class="lede">
+    Every standard size we list is a starting point, not a hard limit. Whether you need a taller deer fence, a shorter stay spacing for goats, a heavier zinc coating for coastal New Zealand, or a non-standard roll length to minimise offcuts — we can build it. All custom product is manufactured on the same AS/NZS 4534 galvanised wire and assembled to <strong>AS 2423</strong> fixed-knotted-joint specification. You get the same quality, sized to your job.
+  </div>
+
+  <!-- 1. PARAMETERS -->
+  <div class="section">
+    <h2><span class="num">1</span> Six Parameters You Control</h2>
+    <p class="intro">These are the dimensions we adjust on every custom order. You can change one of them or all six — we'll build a compliant specification around your requirements.</p>
+
+    <div class="param-grid">
+      <div class="param-card">
+        <div class="p-icon">📏</div>
+        <h3>Fence Height</h3>
+        <div class="p-range">600 mm – 2 400 mm</div>
+        <p>Standard heights run from 700 mm to 1 900 mm. Go lower for aquatic or specialty use, higher for exclusion or security fencing. Tell us the animal and the pressure, and we'll recommend the right height.</p>
+      </div>
+      <div class="param-card">
+        <div class="p-icon">〰️</div>
+        <h3>Number of Line Wires</h3>
+        <div class="p-range">4 – 17 wires</div>
+        <p>More line wires = denser fabric and higher vertical load distribution. Critical for small livestock, vermin exclusion, or deer. Fewer wires reduce cost where pressure is low and aperture size is less critical.</p>
+      </div>
+      <div class="param-card">
+        <div class="p-icon">⬛</div>
+        <h3>Stay Spacing</h3>
+        <div class="p-range">100 mm · 150 mm · 300 mm · Custom</div>
+        <p>Vertical stays hold fence shape and resist stock pressure. 300 mm is standard for cattle and sheep. 150 mm for goats and high-pressure use. 100 mm or less for pigs and vermin exclusion.</p>
+      </div>
+      <div class="param-card">
+        <div class="p-icon">🔩</div>
+        <h3>Wire Diameter</h3>
+        <div class="p-range">2.0 mm – 4.0 mm line wire</div>
+        <p>Heavier gauge increases breaking load and impact resistance — suited for deer, cattle pressure, or perimeter security. Lighter gauge reduces roll weight and cost where livestock pressure is moderate.</p>
+      </div>
+      <div class="param-card">
+        <div class="p-icon">🛡️</div>
+        <h3>Coating Type &amp; Class</h3>
+        <div class="p-range">HDG W7 · W10 · W15 · Zn-Al</div>
+        <p>Zinc coating mass is the biggest driver of service life. W10 (≈ 240 g/m²) is our standard baseline. Coastal and high-humidity sites — most of NZ and AU coastal regions — should step up to Zn-Al or W15+.</p>
+      </div>
+      <div class="param-card">
+        <div class="p-icon">🧵</div>
+        <h3>Roll Length</h3>
+        <div class="p-range">25 m – 500 m per roll</div>
+        <p>Standard rolls are 100 m or 200 m. Short rolls (25–50 m) reduce offcuts on irregular paddocks. Long rolls (250–500 m) cut installation joins and handling time on large stations.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. DESIGNATION -->
+  <div class="section">
+    <h2><span class="num">2</span> How to Read a Fence Designation</h2>
+    <p>Every fixed knot fence product — standard or custom — is described by a three-part designation. Once you understand it, you can specify exactly what you need, or verify that a product matches your requirements.</p>
+
+    <div class="desig-box">
+      <div>
+        <div class="desig-formula">8 / 90 / 30</div>
+        <div class="desig-example">e.g. 8/90/30 = most popular all-stock boundary fence</div>
+      </div>
+      <div class="desig-parts">
+        <div class="desig-part">
+          <span class="dp-val">8</span>
+          <span class="dp-label">Line Wires</span>
+        </div>
+        <div class="desig-sep">/</div>
+        <div class="desig-part">
+          <span class="dp-val">90</span>
+          <span class="dp-label">Height (cm)</span>
+        </div>
+        <div class="desig-sep">/</div>
+        <div class="desig-part">
+          <span class="dp-val">30</span>
+          <span class="dp-label">Stay Spacing (cm)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px">
+      <h4>Custom designations</h4>
+      <p>A custom order simply uses non-standard numbers in the same format. If you need a 1 200 mm fence with 10 line wires and 150 mm stays, the designation becomes <strong>10/120/15</strong>. We quote, produce, and certify it exactly like any standard size — the AS 2423 compliance doesn't change.</p>
+    </div>
+  </div>
+
+  <!-- 3. APPLICATION GUIDE -->
+  <div class="section">
+    <h2><span class="num">3</span> Choose by Application</h2>
+    <p class="intro">Match your livestock, terrain, and environment to a starting specification. These are recommended baselines — we refine them with you based on site conditions, paddock size, and pressure levels.</p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>Animal / Application</th>
+          <th>Height</th>
+          <th>Stay Spacing</th>
+          <th>Min. Wire Ø</th>
+          <th>Coating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sheep — boundary</strong></td>
+          <td>800 – 900 mm</td>
+          <td>300 mm</td>
+          <td>2.5 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sheep &amp; Cattle — mixed stock</strong></td>
+          <td>900 mm</td>
+          <td>300 mm</td>
+          <td>2.5 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Cattle only — paddock</strong></td>
+          <td>900 mm</td>
+          <td>300 mm</td>
+          <td>3.0 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Goats</strong></td>
+          <td>1 000 – 1 150 mm</td>
+          <td>150 mm</td>
+          <td>2.5 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Pigs</strong></td>
+          <td>900 – 1 000 mm</td>
+          <td>100 mm</td>
+          <td>3.0 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Equine (horses)</strong></td>
+          <td>1 200 – 1 500 mm</td>
+          <td>100 mm</td>
+          <td>3.0 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Deer</strong></td>
+          <td>1 800 – 1 900 mm</td>
+          <td>150 – 300 mm</td>
+          <td>2.5 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Wild dogs &amp; foxes</strong></td>
+          <td>900 – 1 150 mm</td>
+          <td>100 – 150 mm</td>
+          <td>2.5 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Kangaroo exclusion</strong></td>
+          <td>1 500 – 1 800 mm</td>
+          <td>150 mm</td>
+          <td>2.5 mm</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Coastal AU / all NZ sites</strong></td>
+          <td>As required</td>
+          <td>As required</td>
+          <td>2.5 mm</td>
+          <td><span class="tag tag-blue">Zn-Al recommended</span></td>
+        </tr>
+        <tr>
+          <td><strong>Large station — long spans</strong></td>
+          <td>900 mm</td>
+          <td>300 mm</td>
+          <td>3.0 mm HT</td>
+          <td><span class="tag tag-green">HDG W10</span></td>
+        </tr>
+        <tr>
+          <td><strong>Non-standard / special project</strong></td>
+          <td>Custom</td>
+          <td>Custom</td>
+          <td>Specify</td>
+          <td><span class="tag tag-amber">Discuss with us</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a class="link-card" href="../news/corrosion-zones-guide.html">
+      <div class="lc-icon">🗺️</div>
+      <div class="lc-body">
+        <h4>Australia Corrosion Zones — Wire Coating Guide (AS/NZS 4534)</h4>
+        <p>Not sure which coating is right for your location? Find your corrosion category and see the recommended HDG or Zn-Al class for your site.</p>
+      </div>
+      <div class="lc-arrow">→</div>
+    </a>
+  </div>
+
+  <!-- 4. COATING -->
+  <div class="section">
+    <h2><span class="num">4</span> Coating — The Most Important Decision</h2>
+    <p>Coating is the single biggest driver of long-term fence value. Get the coating right for your environment and the fence lasts decades. Under-specify it and you're replacing the fence in half the time.</p>
+    <p>We offer two coating systems, both manufactured to <strong>AS/NZS 4534</strong>:</p>
+
+    <div class="coating-grid">
+      <div class="coating-card hdg">
+        <div class="c-header">🔩 Hot-Dip Galvanized (HDG) · Z Coating</div>
+        <div class="c-body">
+          <ul>
+            <li>Pure zinc coating to AS/NZS 4534</li>
+            <li>Available in Class W7, W10, or W15</li>
+            <li>W10 (≈ 240 g/m²) recommended as minimum for rural use</li>
+            <li>Proven 25–40 year service life in standard inland environments</li>
+            <li>Lower unit cost — best value for most AU inland paddocks</li>
+            <li>W15 available for moderately aggressive or high-value installations</li>
+          </ul>
+          <div class="c-best">✓ Best for: Inland Australia · Low humidity · Standard rural fencing</div>
+        </div>
+      </div>
+      <div class="coating-card znal">
+        <div class="c-header">🌊 Zinc-Aluminium Alloy (Zn-Al) · ZA Coating</div>
+        <div class="c-body">
+          <ul>
+            <li>Zinc / 10% aluminium alloy coating per AS/NZS 4534</li>
+            <li>2–3× longer service life than HDG in aggressive environments</li>
+            <li>Superior adhesion at knot joints — resists chipping under load</li>
+            <li>Recommended across most of New Zealand</li>
+            <li>Essential for coastal AU, high humidity, and acid soils</li>
+            <li>Higher upfront cost — lower total lifetime cost per metre</li>
+          </ul>
+          <div class="c-best">✓ Best for: Coastal AU · New Zealand nationwide · High humidity · Marine-adjacent</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px">
+      <h4>Above-standard coating mass available</h4>
+      <p>For critical infrastructure or unusually aggressive environments, we can specify coating mass above the standard W15 class. Share your site conditions and we'll advise the right specification.</p>
+    </div>
+  </div>
+
+  <!-- 5. HOW IT WORKS -->
+  <div class="section">
+    <h2><span class="num">5</span> How a Custom Order Works</h2>
+    <p class="intro">Custom specifications go through the same production and QC process as our standard range — the only difference is the dimensions. Here's how the process runs from enquiry to delivery.</p>
+
+    <div class="steps">
+      <div class="step-card">
+        <h4>Tell Us Your Requirements</h4>
+        <p>Share your animal type, paddock environment, required height, coating preference, and approximate quantity. Rough figures are fine — we'll help refine them.</p>
+      </div>
+      <div class="step-card">
+        <h4>We Propose a Specification</h4>
+        <p>Within 24 hours we'll come back with a recommended designation, coating class, and roll options — all AS 4534 &amp; AS 2423 compliant. We'll also flag any alternatives worth considering.</p>
+      </div>
+      <div class="step-card">
+        <h4>Sample Before You Commit</h4>
+        <p>We ship a sample roll to your location. Check the gauge, joint quality, and coating feel before approving the full production run. No obligation until you're satisfied.</p>
+      </div>
+      <div class="step-card">
+        <h4>Production &amp; Delivery</h4>
+        <p>Custom production runs to your specification. Full documentation — mill certs, SGS reports, AS 2423 compliance declaration — ships with every order.</p>
+      </div>
+    </div>
+
+    <div class="info-strip">
+      <div class="info-item">
+        <div class="i-icon">⏱</div>
+        <div class="i-label">Response Time</div>
+        <div class="i-val">Within 24 hrs</div>
+      </div>
+      <div class="info-item">
+        <div class="i-icon">📦</div>
+        <div class="i-label">Samples</div>
+        <div class="i-val">Before you commit</div>
+      </div>
+      <div class="info-item">
+        <div class="i-icon">🔬</div>
+        <div class="i-label">Documentation</div>
+        <div class="i-val">Full certs included</div>
+      </div>
+      <div class="info-item">
+        <div class="i-icon">🚢</div>
+        <div class="i-label">Delivery</div>
+        <div class="i-val">AU &amp; NZ, on-schedule</div>
+      </div>
+      <div class="info-item">
+        <div class="i-icon">🤝</div>
+        <div class="i-label">Minimum Order</div>
+        <div class="i-val">Flexible — ask us</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. QUOTE FORM -->
+  <div class="section" id="quote">
+    <h2><span class="num">6</span> Request a Custom Quote</h2>
+    <p class="intro">Fill in as much as you know. Even a rough requirement is enough to start — we'll review it and come back with specification options, indicative pricing, and a sample offer within 24 hours.</p>
+
+    <div class="form-wrap">
+      <form name="custom-spec-enquiry" method="POST" netlify netlify-honeypot="bot-field" action="../thanks.html">
+        <input type="hidden" name="form-name" value="custom-spec-enquiry">
+        <p style="display:none"><label>Don't fill this in: <input name="bot-field"></label></p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Your Name <span class="req">*</span></label>
+            <input type="text" name="name" placeholder="e.g. James Hargreaves" required>
+          </div>
+          <div class="form-group">
+            <label>Company / Farm</label>
+            <input type="text" name="company" placeholder="e.g. Hargreaves Station">
+          </div>
+          <div class="form-group">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="+61 or +64 …">
+          </div>
+          <div class="form-group">
+            <label>Country <span class="req">*</span></label>
+            <select name="country" required>
+              <option value="">Select country…</option>
+              <option>Australia</option>
+              <option>New Zealand</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Primary Application</label>
+            <select name="application">
+              <option value="">Select primary use…</option>
+              <option>Sheep — boundary</option>
+              <option>Sheep &amp; Cattle — mixed stock</option>
+              <option>Cattle only</option>
+              <option>Goats</option>
+              <option>Pigs</option>
+              <option>Equine (horses)</option>
+              <option>Deer</option>
+              <option>Wild dog / fox exclusion</option>
+              <option>Kangaroo exclusion</option>
+              <option>Multi-species / mixed</option>
+              <option>Other — describe below</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fence Height Required</label>
+            <select name="height">
+              <option value="">Not sure — advise me</option>
+              <option>600 – 800 mm</option>
+              <option>900 mm (standard)</option>
+              <option>1 000 – 1 150 mm</option>
+              <option>1 200 – 1 500 mm</option>
+              <option>1 800 – 1 900 mm (deer)</option>
+              <option>Over 1 900 mm (custom)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Preferred Stay Spacing</label>
+            <select name="stay-spacing">
+              <option value="">Not sure — advise me</option>
+              <option>300 mm — standard sheep &amp; cattle</option>
+              <option>150 mm — goats &amp; high pressure</option>
+              <option>100 mm or less — pigs, equine, vermin</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Coating Preference</label>
+            <select name="coating">
+              <option value="">Not sure — advise me based on location</option>
+              <option>HDG W10 — standard inland</option>
+              <option>HDG W15 — heavy inland / moderately aggressive</option>
+              <option>Zinc-Aluminium (Zn-Al) — coastal / NZ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Roll Length</label>
+            <select name="roll-length">
+              <option value="">Standard (100–200 m)</option>
+              <option>Short rolls (25–50 m)</option>
+              <option>100 m</option>
+              <option>200 m</option>
+              <option>250 m</option>
+              <option>400 – 500 m (large station)</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Quantity / Project Scale</label>
+            <input type="text" name="quantity" placeholder="e.g. 50 rolls · or · approx. 10 km of fencing · or · 200 ha paddock">
+          </div>
+          <div class="form-group full">
+            <label>Additional Requirements or Questions</label>
+            <textarea name="message" placeholder="Terrain, specific wire gauge, project timeline, existing fence compatibility, packaging requirements, or anything else that helps us spec the right product for you…"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit">Send Custom Enquiry →</button>
+            <p class="form-note">We review every enquiry personally and respond within 24 hours — with a specification recommendation, indicative pricing, and a sample offer.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h3>Not Sure Where to Start?</h3>
+    <p>Tell us your animal and your environment — we'll translate that into a spec, a coating recommendation, and a quote. No obligation until you're satisfied with the sample.</p>
+    <div class="btns">
+      <a href="../index.html#contact" class="btn-w">Contact Us Directly</a>
+      <a href="fixed-knot-fence.html" class="btn-o">Browse Standard Sizes</a>
+    </div>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60" width="220" height="44" style="margin-bottom:14px">
+      <rect x="0"  y="38" width="15" height="20" rx="2" fill="#3BBD7A"/>
+      <rect x="19" y="24" width="15" height="34" rx="2" fill="#2DA86A"/>
+      <polygon points="44,0  32,15  38,15  38,58  53,58  53,15  58,15" fill="#5DD99A"/>
+      <text x="70" y="38" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="28" fill="white" letter-spacing="1">YIELD MAX</text>
+      <text x="72" y="52" font-family="Arial,sans-serif" font-weight="700" font-size="8" fill="#3BBD7A" letter-spacing="2">STRONGER FENCES. BIGGER YIELDS.</text>
+    </svg>
+    <p>Specializing in AS 4534 compliant fixed knot fencing for the Australian and New Zealand rural market. Hot-dip galvanized and zinc-aluminum coating options.</p>
+  </div>
+  <div>
+    <h4>Products</h4>
+    <a href="fixed-knot-fence.html">Fixed Knot Fence — Full Guide</a>
+    <a href="#">Fixed Knot Fence — Zn-Al</a>
+    <a href="custom-specifications.html">Custom Specifications</a>
+    <a href="../standards.html">Standards &amp; Certifications</a>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <a href="mailto:sales@yieldmaxfence.com">sales@yieldmaxfence.com</a>
+    <a href="tel:+8615032207479">+86 150 3220 7479</a>
+    <p>Serving Australia &amp; New Zealand</p>
+    <p style="margin-top:12px;font-size:12px;color:#555">AS 4534 · HDG · Zn-Al</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  © 2026 YIELD MAX. All rights reserved. · yieldmaxfence.com
+</div>
+
+</body>
+</html>
