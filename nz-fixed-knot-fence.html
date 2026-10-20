@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
+  <!-- Google Ads measurement: NZ enquiry campaign -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18486985092"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18486985092', {allow_enhanced_conversions:false, allow_ad_personalization_signals:false});
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fixed Knot Fence for New Zealand Importers | YIELD MAX</title>
@@ -100,13 +108,13 @@
         <div class="contact-copy"><div class="eyebrow">Start with your current specification</div><h2>Request a specification and container quotation</h2><p>Send as much information as you have. A current supplier specification, product designation or target roll weight is enough to start the comparison.</p><p>Email: <a href="mailto:sales@yieldmaxfence.com">sales@yieldmaxfence.com</a><br>Phone: <a href="tel:+8615032207479">+86 150 3220 7479</a></p></div>
         <form class="form" name="nz-fixed-knot-enquiry" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="nz-fixed-knot-enquiry"><p hidden><label>Do not fill: <input name="bot-field"></label></p>
-          <input type="hidden" name="product" value="Fixed Knot Fence"><input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="landing_page">
+          <input type="hidden" name="product" value="Fixed Knot Fence"><input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="landing_page"><input type="hidden" name="gclid"><input type="hidden" name="gbraid"><input type="hidden" name="wbraid"><input type="hidden" name="enquiry_id">
           <div class="row"><div class="group"><label for="name">Name *</label><input id="name" name="name" required autocomplete="name"></div><div class="group"><label for="company">Company *</label><input id="company" name="company" required autocomplete="organization"></div></div>
           <div class="row"><div class="group"><label for="email">Business email *</label><input id="email" name="email" type="email" required autocomplete="email"></div><div class="group"><label for="country">Country *</label><select id="country" name="country" required><option value="New Zealand" selected>New Zealand</option><option value="Australia">Australia</option><option value="Other">Other</option></select></div></div>
           <div class="row"><div class="group"><label for="buyer_type">Buyer type *</label><select id="buyer_type" name="buyer_type" required><option value="">Select...</option><option>Importer / Distributor</option><option>Farm Supply Retailer</option><option>Fencing Contractor</option><option>Project Buyer</option><option>Other</option></select></div><div class="group"><label for="quantity">Estimated quantity</label><select id="quantity" name="quantity"><option value="">Select...</option><option>Trial order</option><option>1 × 20-foot container</option><option>1 × 40-foot container</option><option>Multiple containers</option><option>Other / not decided</option></select></div></div>
           <div class="group"><label for="specification">Current or required specification *</label><textarea id="specification" name="specification" required placeholder="Example: 8/90/30, wire diameters, coating requirement, roll length, quantity and packing"></textarea></div>
           <label class="check"><input type="checkbox" name="contact_permission" value="yes" required><span>I agree that YIELD MAX may contact me about this enquiry using the details provided.</span></label>
-          <button class="button" type="submit">Request Specification &amp; Quote</button><p class="fine">We use these details only to respond to this business enquiry. Do not include passwords, payment-card data or confidential personal information.</p>
+          <p id="enquiry-status" role="status" aria-live="polite" style="margin-bottom:12px"></p><button class="button" type="submit">Request Specification &amp; Quote</button><p class="fine">We use these details to respond to your business enquiry. Google Ads cookies help measure visits and successful enquiries; form contents are not sent to Google by this tracking. Do not include passwords, payment-card data or confidential personal information.</p>
         </form>
       </div>
     </section>
@@ -114,7 +122,51 @@
 
   <footer><div class="wrap"><span>© 2026 YIELD MAX · Fixed knot fence and star picket export supply</span><span><a href="/">Home</a> · <a href="/products/fixed-knot-fence.html">Product guide</a> · <a href="mailto:sales@yieldmaxfence.com">Contact</a></span></div></footer>
   <script>
-    (function(){var p=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','utm_term'].forEach(function(k){var el=document.querySelector('[name="'+k+'"]');if(el)el.value=p.get(k)||''});var lp=document.querySelector('[name="landing_page"]');if(lp)lp.value=location.pathname+location.search;})();
+    (function(){var p=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','utm_term','gclid','gbraid','wbraid'].forEach(function(k){var el=document.querySelector('[name="'+k+'"]');if(el)el.value=p.get(k)||''});var lp=document.querySelector('[name="landing_page"]');if(lp)lp.value=location.pathname+location.search;})();
+  </script>
+
+  <script>
+    (function(){
+      var form=document.forms['nz-fixed-knot-enquiry'];
+      if(!form || !window.fetch || !window.FormData) return;
+      var busy=false, accepted=false;
+      var button=form.querySelector('button[type="submit"]');
+      var status=document.getElementById('enquiry-status');
+      var id='nz-'+(window.crypto && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));
+      form.elements.enquiry_id.value=id;
+      form.addEventListener('submit',async function(event){
+        event.preventDefault();
+        if(busy || accepted || !form.reportValidity()) return;
+        busy=true; button.disabled=true; button.textContent='Sending enquiry…';
+        status.textContent='';
+        try {
+          var response=await fetch('/',{
+            method:'POST',
+            headers:{'Content-Type':'application/x-www-form-urlencoded'},
+            body:new URLSearchParams(new FormData(form)).toString()
+          });
+          if(!response.ok) throw new Error('Submission failed');
+        } catch(error) {
+          busy=false; button.disabled=false; button.textContent='Request Specification & Quote';
+          status.textContent='Your enquiry could not be confirmed. Please try again or email sales@yieldmaxfence.com.';
+          return;
+        }
+        accepted=true;
+        status.textContent='Your enquiry has been received. Thank you.';
+        var navigate=function(){window.location.assign('/thanks.html');};
+        var fallback=window.setTimeout(navigate,2000);
+        if(typeof window.gtag==='function'){
+          window.gtag('event','conversion',{
+            send_to:'AW-18486985092/sx9UCKH_k6MdEISDpO9E',
+            transaction_id:id,
+            event_callback:function(){window.clearTimeout(fallback);navigate();},
+            event_timeout:1500
+          });
+        } else {
+          window.clearTimeout(fallback);navigate();
+        }
+      });
+    })();
   </script>
 </body>
 </html>
