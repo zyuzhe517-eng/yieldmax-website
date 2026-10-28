@@ -12,8 +12,8 @@
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YIELD MAX — Fixed Knot Fence | Australia & New Zealand</title>
-  <meta name="description" content="YIELD MAX manufactures fixed knot fence to buyer specifications for Australia and New Zealand, with controlled galvanised wire, factory-checked dimensions and export packing.">
+  <title>YIELD MAX — Fixed Knot Fence | Bulk Export Supply</title>
+  <meta name="description" content="YIELD MAX manufactures fixed knot fence for livestock, deer and bulk export supply. Discuss buyer specifications, coating options and palletised packing for your destination market.">
   <link rel="canonical" href="https://www.yieldmaxfence.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="YIELD MAX — Fixed Knot Fence">
@@ -224,7 +224,7 @@
 
     /* ── MARKETS ── */
     .markets { background: white; text-align: center; }
-    .markets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 800px; margin: 48px auto 0; }
+    .markets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1100px; margin: 48px auto 0; }
     .market-card {
       border-radius: 12px; padding: 36px 32px;
       border: 2px solid #cdeadb; position: relative; overflow: hidden;
@@ -238,7 +238,7 @@
       background: var(--green-dark); color: white;
       padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700;
     }
-    .market-badge.new { background: var(--green-light); }
+    .market-badge.new { background: #287c4d; }
 
     /* ── CONTACT ── */
     .contact-section {
@@ -304,6 +304,20 @@
       footer { grid-template-columns: 1fr; padding: 40px 24px 20px; }
       .trust-bar { gap: 28px; padding: 20px 24px; }
     }
+
+    /* Market overview and enquiry routing */
+    #markets { scroll-margin-top:88px; }
+    .market-card { display:flex; flex-direction:column; padding-top:54px; }
+    .market-card .market-focus { font-weight:800; color:var(--green-dark); margin-bottom:14px; }
+    .market-card .market-channel { margin-top:14px; font-size:13px; }
+    .market-card .market-link { display:block; margin-top:auto; padding-top:22px; color:var(--green-dark); font-size:14px; font-weight:800; text-decoration:underline; text-underline-offset:4px; }
+    .market-flag { font-size:38px; min-height:54px; }
+    .other-markets { max-width:1100px; margin:28px auto 0; display:grid; grid-template-columns:1fr auto; gap:28px; align-items:center; text-align:left; padding:30px 32px; background:var(--green-pale); border:1px solid #cdeadb; border-radius:12px; }
+    .other-markets h3 { color:var(--green-dark); font-size:24px; margin-bottom:10px; }
+    .other-markets p { color:var(--text-grey); font-size:15px; line-height:1.7; max-width:700px; }
+    .other-markets .btn-outline { white-space:nowrap; }
+    #markets a:focus-visible { outline:3px solid var(--green-mid); outline-offset:5px; }
+    @media(max-width:900px) { .other-markets { grid-template-columns:1fr; padding:24px; } .other-markets .btn-outline { justify-self:start; } }
   </style>
 </head>
 <body>
@@ -337,7 +351,7 @@
   <div>
     <div class="hero-label">Fixed Knot Fence · HDG &amp; Zn-Al Options</div>
     <h1>Fixed Knot Fence<br>Built for <span>Tougher Land</span></h1>
-    <p>Over 10 years supplying Australia's rural fencing market. Now bringing the same proven quality to New Zealand farmers and distributors.</p>
+    <p>Over 10 years supplying Australia's rural fencing market. We welcome bulk export enquiries and review fixed knot fence specifications for your destination market.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn-primary">Request a Sample</a>
       <a href="#products" class="btn-secondary">View Products</a>
@@ -543,34 +557,55 @@
 </section>
 
 <!-- MARKETS -->
-<section class="markets" id="markets">
-  <div class="section-label">Our Markets</div>
-  <h2 class="section-title">Two Markets, Two Coating Tiers</h2>
-  <p class="section-sub" style="margin:0 auto;">Same fixed knot platform, two distinct product tiers — matched to how each market actually buys.</p>
+<section class="markets" id="markets" aria-labelledby="markets-title">
+  <div class="section-label">Markets &amp; Trade Supply</div>
+  <h2 class="section-title" id="markets-title">Fixed Knot Fence for Your Market</h2>
+  <p class="section-sub" style="margin:0 auto;max-width:760px;">Start with your destination market and current fence specification. We review configurations, coating requirements and export packing for bulk and full-container supply.</p>
   <div class="markets-grid">
     <div class="market-card active">
-      <div class="market-badge">Established</div>
-      <div class="market-flag">🇦🇺</div>
+      <div class="market-badge">Established Supply</div>
+      <div class="market-flag" aria-hidden="true">🇦🇺</div>
       <h3>Australia</h3>
-      <p style="margin-bottom:14px"><strong>Mainstream HDG · Type Z</strong></p>
-      <p>Over 10 years serving Australian rural fencing contractors, distributors and farm supply retailers across all states. HT line + MT stay wire on Hot-Dip Galvanized coating — the proven AU standard build for sheep, beef and boundary fencing.</p>
-      <div style="margin-top:14px;display:flex;gap:6px;flex-wrap:wrap;justify-content:center">
-        <span style="background:var(--green-dark);color:white;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;letter-spacing:.5px">HDG · Z</span>
-        <span style="background:white;color:var(--green-dark);font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;border:1px solid var(--green-dark);letter-spacing:.5px">HT line + MT stay</span>
-      </div>
+      <p class="market-focus">Regular rural fencing configurations</p>
+      <p>Our regularly supplied configurations include 7/90/30, 7/90/45 and 8/90/15. Fence construction, coating and roll requirements are agreed for each order.</p>
+      <p class="market-channel">For Australian supply enquiries, contact us so we can direct you to the appropriate supply channel.</p>
+      <a class="market-link" href="products/fixed-knot-fence.html#configurations">View common configurations <span aria-hidden="true">&rarr;</span></a>
     </div>
     <div class="market-card">
-      <div class="market-badge new">Now Expanding</div>
-      <div class="market-flag">🇳🇿</div>
+      <div class="market-badge new">Trade Enquiries</div>
+      <div class="market-flag" aria-hidden="true">🇳🇿</div>
       <h3>New Zealand</h3>
-      <p style="margin-bottom:14px"><strong>HDG and Alloy-Coated Wire Options</strong></p>
-      <p>Fixed knot fence can be configured for New Zealand livestock, deer and boundary-fencing requirements. We are seeking importers and distribution partners and welcome buyers' existing specifications for comparison.</p>
-      <p style="margin-top:14px"><a href="/nz-fixed-knot-fence.html" style="color:var(--green-dark);font-weight:800">New Zealand buyer information &amp; quotation →</a></p>
-      <div style="margin-top:14px;display:flex;gap:6px;flex-wrap:wrap;justify-content:center">
-        <span style="background:var(--green-light);color:white;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;letter-spacing:.5px">ZA · ZM</span>
-        <span style="background:white;color:var(--green-dark);font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;border:1px solid var(--green-light);letter-spacing:.5px">HT line + HT stay</span>
-      </div>
+      <p class="market-focus">Livestock, deer &amp; field fencing</p>
+      <p>We welcome enquiries from New Zealand importers and distributors. Share your current roll label or drawing to compare the mesh configuration, wire and coating requirements.</p>
+      <p class="market-channel">Bulk and full-container supply proposals are prepared against the buyer's specification.</p>
+      <a class="market-link" href="/nz-fixed-knot-fence.html">New Zealand buyer information <span aria-hidden="true">&rarr;</span></a>
     </div>
+    <div class="market-card">
+      <div class="market-badge new">Specification Review</div>
+      <div class="market-flag" aria-hidden="true">🇨🇦 🇺🇸</div>
+      <h3>United States &amp; Canada</h3>
+      <p class="market-focus">Fixed knot, deer &amp; game fence</p>
+      <p>Configurations such as 2096-6 and 1775-6 can be reviewed for North American trade enquiries. Discuss the required ASTM A116 strength grade, wire size and coating class with our team.</p>
+      <p class="market-channel">Detailed technical sheets, product videos and packing information are supplied directly on request.</p>
+      <a class="market-link" href="products/fixed-knot-fence.html#request-details">Request product information <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="market-card">
+      <div class="market-badge new">Trade Enquiries</div>
+      <div class="market-flag" aria-hidden="true">🇬🇧 🇮🇪</div>
+      <h3>United Kingdom &amp; Ireland</h3>
+      <p class="market-focus">Agricultural &amp; deer fencing supply</p>
+      <p>We welcome specification discussions with wholesalers, distributors and agricultural supply businesses. Send your preferred mesh pattern and any applicable EN or buyer-specific requirements.</p>
+      <p class="market-channel">Manufacturing availability and order requirements are confirmed following technical review.</p>
+      <a class="market-link" href="products/fixed-knot-fence.html#request-details">Discuss your specification <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+  <div class="other-markets">
+    <div>
+      <div class="section-label">Other Markets</div>
+      <h3>Buying for Another Country?</h3>
+      <p>Tell us your destination country, current fence specification and estimated order quantity. We will review manufacturing availability and discuss a suitable export supply proposal.</p>
+    </div>
+    <a href="#contact" class="btn-outline">Discuss Your Market <span aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 
@@ -578,11 +613,11 @@
 <section class="contact-section" id="contact">
   <div class="contact-left">
     <h2>Let's Talk Fencing</h2>
-    <p>Whether you're looking for samples, a quote, or a long-term distribution partnership in Australia or New Zealand — we'd love to hear from you.</p>
+    <p>Contact us for bulk fixed knot fence quotations, technical information or trade supply discussions. Share your destination market, preferred specification and estimated order quantity.</p>
     <div class="contact-info">
       <div class="contact-info-item">📧 <a href="mailto:sales@yieldmaxfence.com" style="color:white">sales@yieldmaxfence.com</a></div>
       <div class="contact-info-item">📞 <span>+86 150 3220 7479</span></div>
-      <div class="contact-info-item">🌏 <span>Serving Australia & New Zealand</span></div>
+      <div class="contact-info-item">🌏 <span>Bulk export supply · Market-specific enquiries</span></div>
       <div class="contact-info-item">📦 <span>Samples available on request</span></div>
       <div class="contact-info-item">🔬 <span>Third-party testing supported</span></div>
       <div class="contact-info-item">📝 <span>Specification review and container quotations</span></div>
@@ -622,6 +657,10 @@
           <option value="">Select country...</option>
           <option value="Australia">Australia</option>
           <option value="New Zealand">New Zealand</option>
+          <option value="Canada">Canada</option>
+          <option value="United States">United States</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Ireland">Ireland</option>
           <option value="Other">Other</option>
         </select>
       </div>
@@ -655,7 +694,7 @@
       <text x="70" y="38" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="28" fill="white" letter-spacing="1">YIELD MAX</text>
       <text x="72" y="52" font-family="Arial,sans-serif" font-weight="700" font-size="8" fill="#3BBD7A" letter-spacing="2">STRONGER FENCES. BIGGER YIELDS.</text>
     </svg>
-    <p>Specializing in AS 4534 compliant fixed knot fencing for the Australian and New Zealand rural market. Hot-dip galvanized and zinc-aluminum coating options.</p>
+    <p>Fixed knot fencing manufactured to buyer specifications, with coating options, palletised export packing and full-container quotations.</p>
   </div>
   <div>
     <h4>Products</h4>
@@ -668,7 +707,7 @@
     <h4>Contact</h4>
     <a href="mailto:sales@yieldmaxfence.com">sales@yieldmaxfence.com</a>
     <a href="tel:+8615032207479">+86 150 3220 7479</a>
-    <p>Serving Australia & New Zealand</p>
+    <p>Bulk export supply · Market-specific enquiries</p>
     <p style="margin-top:12px;font-size:12px;color:#555">AS 4534 · HDG · Zn-Al</p>
   </div>
 </footer>
@@ -678,3 +717,4 @@
 
 </body>
 </html>
+
