@@ -28,7 +28,7 @@
   </url>
   <url>
     <loc>https://www.yieldmaxfence.com/news.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -61,5 +61,10 @@
     <loc>https://www.yieldmaxfence.com/products/custom-specifications.html</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.yieldmaxfence.com/news/welded-wire-mesh-customer-sourcing.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
